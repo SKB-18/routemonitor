@@ -1,0 +1,53 @@
+[
+  {
+    "event_type": "UPDATE",
+    "prefix": "10.0.0.0/24",
+    "path_attributes": {
+      "as_path": [65001, 65002, 65003],
+      "next_hop": "192.168.1.2",
+      "origin": "IGP",
+      "local_pref": 100,
+      "med": 0
+    },
+    "neighbor_ip": "192.168.1.2",
+    "neighbor_asn": 65002,
+    "sequence_number": 1
+  },
+  {
+    "event_type": "UPDATE",
+    "prefix": "172.16.0.0/16",
+    "path_attributes": {
+      "as_path": [65001, 65100],
+      "next_hop": "10.0.0.1",
+      "origin": "EGP",
+      "local_pref": 90,
+      "med": 50
+    },
+    "neighbor_ip": "10.0.0.1",
+    "neighbor_asn": 65100,
+    "sequence_number": 2
+  },
+  {
+    "event_type": "WITHDRAW",
+    "prefix": "10.0.0.0/24",
+    "withdrawn_prefixes": ["10.0.0.0/24"],
+    "neighbor_ip": "192.168.1.2",
+    "neighbor_asn": 65002,
+    "sequence_number": 3
+  },
+  {
+    "event_type": "UPDATE",
+    "prefix": "192.168.0.0/16",
+    "path_attributes": {
+      "as_path": [65001, 65002],
+      "next_hop": "192.168.1.2",
+      "origin": "IGP",
+      "local_pref": 100,
+      "med": 0,
+      "community": ["65001:100", "65002:200"]
+    },
+    "neighbor_ip": "192.168.1.2",
+    "neighbor_asn": 65002,
+    "sequence_number": 4
+  }
+]
