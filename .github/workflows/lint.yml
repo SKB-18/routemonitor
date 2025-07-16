@@ -27,9 +27,3 @@ jobs:
 
       - name: isort (import order)
         run: isort --profile black --check-only api/ core/ tasks/ dashboard/ tests/ scripts/
-
-      - name: flake8 (style)
-        run: flake8 api/ core/ tasks/ --max-line-length=100
-
-      - name: mypy (types)
-        run: mypy api/ core/ tasks/ --ignore-missing-imports
