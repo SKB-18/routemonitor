@@ -67,6 +67,7 @@ class TestDeviceHealthPage:
 
     def test_api_connect_error_shows_error(self, api_client):
         import httpx
+
         from dashboard.views import device_health
 
         api_client.list_speakers.side_effect = httpx.ConnectError("refused")

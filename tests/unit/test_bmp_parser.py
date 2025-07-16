@@ -3,7 +3,7 @@ import struct
 
 import pytest
 
-from core.bmp_parser import BMPParser, MSG_ROUTE_MONITORING
+from core.bmp_parser import MSG_ROUTE_MONITORING, BMPParser
 from tests.fixtures.bgp_telemetry_generator import MockBGPTelemetryGenerator
 
 

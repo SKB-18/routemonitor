@@ -79,8 +79,9 @@ class TestExtendedRBAC:
     def test_operator_can_retry_failed_alert(
         self, auth_client, db_session, mock_anomaly, operator_token
     ):
-        from api.models import Alert
         from datetime import datetime, timezone
+
+        from api.models import Alert
 
         alert = Alert(
             id=uuid.uuid4(),

@@ -5,7 +5,8 @@ import pytest
 from fastapi import HTTPException
 from jose import jwt
 
-from api.auth import ROLE_LEVELS, create_access_token, decode_token, require_role
+from api.auth import (ROLE_LEVELS, create_access_token, decode_token,
+                      require_role)
 from core.config import Settings, settings
 
 

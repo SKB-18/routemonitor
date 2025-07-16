@@ -10,9 +10,8 @@ from typing import Callable
 
 import structlog
 from fastapi import Request, Response
-from starlette.middleware.base import BaseHTTPMiddleware
-
 from prometheus_client import Counter, Histogram
+from starlette.middleware.base import BaseHTTPMiddleware
 
 logger = structlog.get_logger(__name__)
 

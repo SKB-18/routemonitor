@@ -23,7 +23,6 @@ import struct
 import time
 from typing import List, Optional
 
-
 # ─── BMP / BGP constants ─────────────────────────────────────────────────────
 
 BMP_VERSION = 3

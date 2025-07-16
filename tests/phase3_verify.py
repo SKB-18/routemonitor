@@ -108,10 +108,11 @@ def test_influxdb_phase3() -> None:
 
 def test_celery_phase3() -> None:
     print("\n=== 3. Celery Phase 3 tasks (live) ===")
+    from unittest.mock import MagicMock, patch
+
     from api.database import SessionLocal
     from api.models import BGPSpeaker, WebhookSubscription
     from tasks.ingestion import detect_anomalies_task, dispatch_alerts_task
-    from unittest.mock import patch, MagicMock
 
     hostname = f"p3-{uuid.uuid4().hex[:8]}"
 

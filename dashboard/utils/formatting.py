@@ -2,7 +2,6 @@
 from datetime import datetime
 from typing import Any, Dict
 
-
 SEVERITY_COLORS = {
     "INFO": "#3498db",
     "WARNING": "#f39c12",

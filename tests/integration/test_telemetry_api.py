@@ -5,7 +5,6 @@ import pytest
 
 from tests.fixtures.bgp_telemetry_generator import MockBGPTelemetryGenerator
 
-
 SPEAKER_PAYLOAD = {
     "hostname": "router1",
     "router_id": "10.0.0.1",

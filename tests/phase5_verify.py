@@ -141,9 +141,9 @@ def test_auth_live(client: httpx.Client) -> None:
 
 def _clear_rate_limits() -> None:
     """Flush Redis rate-limit keys between hammer tests and load test."""
-    from core.config import settings
-
     import redis as redis_lib
+
+    from core.config import settings
 
     r = redis_lib.from_url(settings.REDIS_URL, decode_responses=True)
     for key in r.scan_iter("rate_limit:*"):
@@ -210,7 +210,8 @@ def test_prometheus_live(client: httpx.Client) -> None:
 
 def test_bmp_ingest_live(client: httpx.Client) -> None:
     print("\n=== 5. BMP ingest smoke (live) ===")
-    from tests.fixtures.bgp_telemetry_generator import MockBGPTelemetryGenerator
+    from tests.fixtures.bgp_telemetry_generator import \
+        MockBGPTelemetryGenerator
 
     gen = MockBGPTelemetryGenerator()
 

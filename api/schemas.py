@@ -8,7 +8,6 @@ from uuid import UUID
 
 from pydantic import BaseModel, Field, field_validator, model_validator
 
-
 # ─── Helpers ──────────────────────────────────────────────────────────────────
 
 CIDR_RE = re.compile(r"^(\d{1,3}\.){3}\d{1,3}/([0-9]|[1-2][0-9]|3[0-2])$")
